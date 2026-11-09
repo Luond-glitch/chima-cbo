@@ -63,7 +63,7 @@ Pastoralist communities hold generations of understanding about land, water and 
 
 Young people are well placed to connect both worlds, and CHIMA aims to support them in doing so.
 
-_This is a sample article. Replace it with your own content._
+
 `,
   },
   {
@@ -86,7 +86,7 @@ Healthy ecosystems support livelihoods, protect water sources and build communit
 
 Membership is open to residents of Northern Kenya and the Upper Eastern Region, with priority for youth, women and pastoralist communities.
 
-_This is a sample article. Replace it with your own content._
+
 `,
   },
 ];

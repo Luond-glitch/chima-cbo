@@ -4,7 +4,7 @@ import PageHeader from '../components/PageHeader.jsx';
 import Reveal from '../components/Reveal.jsx';
 import Photo from '../components/Photo.jsx';
 import { gallery } from '../data/site.js';
-
+/*//<code>src/data/site.js</code>*/
 export default function Gallery() {
   const [open, setOpen] = useState(null);
 
@@ -20,7 +20,6 @@ export default function Gallery() {
       <PageHeader title="Gallery" subtitle="Community engagements, environmental projects and field activities" crumb="Gallery" />
       <section className="section">
         <div className="container">
-          <p className="lead center-text narrow">Placeholder images are shown until real photographs are added. Edit the gallery list in <code>src/data/site.js</code>.</p>
           <div className="gallery-grid mt">
             {gallery.map((g, i) => (
               <Reveal key={g.id} delay={(i % 4) * 70}>

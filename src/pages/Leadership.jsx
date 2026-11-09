@@ -14,7 +14,6 @@ export default function Leadership() {
             office bearers, manages day-to-day affairs. Select any box to read more.
           </p>
           <Organogram data={leadership} />
-          <p className="note center-note"><Info size={16} /> Names and biographies are placeholders and can be updated in <code>src/data/leadership.js</code>.</p>
         </div>
       </section>
     </>

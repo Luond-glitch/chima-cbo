@@ -65,10 +65,7 @@ export default function About() {
               <Reveal as="li" key={o.no}><CheckCircle2 size={22} aria-hidden="true" /><div><strong>{o.no}</strong> {o.text}</div></Reveal>
             ))}
           </ol>
-          <div className="note">
-            <strong>Proposed additions (not yet in the Constitution):</strong>
-            <ul>{proposedObjectives.map((p) => <li key={p}>{p}</li>)}</ul>
-          </div>
+         
         </div>
       </section>
 

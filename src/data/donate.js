@@ -1,9 +1,4 @@
-// ============================================================================
-//  DONATION DETAILS – ALL VALUES BELOW ARE MOCK / SAMPLE DATA.
-//  Replace every value with CHIMA's real payment details before launch.
-//  The page shows a "sample details" notice while `mock` is true; set it to false
-//  once the real numbers are in.
-// ============================================================================
+
 export const donate = {
   mock: true,
   currency: 'KSh',
