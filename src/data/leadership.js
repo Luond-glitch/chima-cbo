@@ -61,7 +61,7 @@ export const leadership = [
   {
     id: 4, parentId: 2, type: 'member', placeholder: true,
     name: 'Linah Munyi', position: 'Vice Chairperson', image: "/images/leadership/lynne.jpeg",
-    biography: 'Linah Munyi is an emerging disaster risk management and climate resilience practitioner passionate about environmental conservation, community empowerment and sustainable development. With an academic background in Disaster Risk Management and Sustainable Development, she is particularly interested in strengthening community resilience, promoting disaster preparedness and advancing climate adaptation initiatives. Her practical experience at the National Disaster Operations Centre has enhanced her understanding of disaster risk communication, coordinated response and informed decision-making. As Vice Chairperson of Chipukizi wa Mazingira (CHIMA) and Millennium Fellowship Class of 2026 Campus Director, she is committed to supporting youth leadership, championing community-driven environmental solutions and advancing CHIMA’s mission of environmental stewardship, climate resilience and sustainable community development.',
+    biography: 'Mrs.Linah Munyi is an emerging disaster risk management and climate resilience practitioner passionate about environmental conservation, community empowerment and sustainable development. With an academic background in Disaster Risk Management and Sustainable Development, she is particularly interested in strengthening community resilience, promoting disaster preparedness and advancing climate adaptation initiatives. Her practical experience at the National Disaster Operations Centre has enhanced her understanding of disaster risk communication, coordinated response and informed decision-making. As Vice Chairperson of Chipukizi wa Mazingira (CHIMA) and Millennium Fellowship Class of 2026 Campus Director, she is committed to supporting youth leadership, championing community-driven environmental solutions and advancing CHIMA’s mission of environmental stewardship, climate resilience and sustainable community development.',
     duties: [
       'Assist the Chairperson and act on their behalf in their absence',
       'Support coordination and supervision of committees and special assignments',
@@ -70,7 +70,7 @@ export const leadership = [
   },
   {
     id: 5, parentId: 2, type: 'member', placeholder: true,
-    name: 'Cynthia Akinyi Ochieng', position: 'Secretary', image: "/images/leadership/synthia.jpeg",
+    name: 'Mrs.Cynthia Akinyi Ochieng', position: 'Secretary', image: "/images/leadership/synthia.jpeg",
     biography: 'Cynthia Akinyi Ochieng,is a dedicated community development practitioner, disaster risk management strategist, and skilled administrator serving as the Secretary of the Chima. She brings a strong background in volunteer mobilization, emergency preparedness, and administrative governance. Through her extensive civic engagements, including her work with the Kenya Red Cross Society and local community mobilization projects,she is committed to driving sustainable, community-led solutions and advancing long-term resilience for the organization initiatives.',
     duties: [
       'Keep all official records and documentation',
@@ -93,8 +93,8 @@ export const leadership = [
   },
   {
     id: 7, parentId: 2, type: 'member', placeholder: true,
-    name: 'Grace Wanje Kemori', position: 'Programme Coordinator', image: "/images/leadership/image.png",
-    biography: 'Grace Wanja Kimori is a dedicated young leader and final-year student at The Co-operative University of Kenya, pursuing a Bachelor of Science in Disaster Risk Management and Sustainable Development. She is passionate about environmental conservation, disaster preparedness and building resilient communities. Through her involvement with Amani Gold Organisation and volunteer work at 3E’s Experience, she has gained exposure to community service, environmental education and empowerment initiatives. As Programme Coordinator at Chipukizi wa Mazingira (CHIMA), she is committed to supporting the planning, coordination and implementation of programmes that advance environmental stewardship, climate resilience, youth participation and sustainable community development. She aspires to create lasting positive change through effective leadership and service.',
+    name: 'Mrs.Grace Wanje Kemori', position: 'Programme Coordinator', image: "/images/leadership/image.png",
+    biography: 'Grace Wanje Kimori is a dedicated young leader and final-year student at The Co-operative University of Kenya, pursuing a Bachelor of Science in Disaster Risk Management and Sustainable Development. She is passionate about environmental conservation, disaster preparedness and building resilient communities. Through her involvement with Amani Gold Organisation and volunteer work at 3E’s Experience, she has gained exposure to community service, environmental education and empowerment initiatives. As Programme Coordinator at Chipukizi wa Mazingira (CHIMA), she is committed to supporting the planning, coordination and implementation of programmes that advance environmental stewardship, climate resilience, youth participation and sustainable community development. She aspires to create lasting positive change through effective leadership and service.',
     duties: [
       'Programme Planning and Development',
       'Programme Implementation and Supervision',
