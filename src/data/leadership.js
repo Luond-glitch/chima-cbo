@@ -60,7 +60,7 @@ export const leadership = [
   },
   {
     id: 4, parentId: 2, type: 'member', placeholder: true,
-    name: 'Linah Munyi', position: 'Vice Chairperson', image: "/images/leadership/lynne.jpeg",
+    name: 'Mrs.Linah Munyi', position: 'Vice Chairperson', image: "/images/leadership/lynne.jpeg",
     biography: 'Mrs.Linah Munyi is an emerging disaster risk management and climate resilience practitioner passionate about environmental conservation, community empowerment and sustainable development. With an academic background in Disaster Risk Management and Sustainable Development, she is particularly interested in strengthening community resilience, promoting disaster preparedness and advancing climate adaptation initiatives. Her practical experience at the National Disaster Operations Centre has enhanced her understanding of disaster risk communication, coordinated response and informed decision-making. As Vice Chairperson of Chipukizi wa Mazingira (CHIMA) and Millennium Fellowship Class of 2026 Campus Director, she is committed to supporting youth leadership, championing community-driven environmental solutions and advancing CHIMA’s mission of environmental stewardship, climate resilience and sustainable community development.',
     duties: [
       'Assist the Chairperson and act on their behalf in their absence',
@@ -103,9 +103,9 @@ export const leadership = [
     ],
   },
   {
-    id: 8, parentId: 2, type: 'member', placeholder: false,
-    name: 'Bryan', position: 'Organizing Secretary', image: "/images/leadership/",
-    biography: '',
+    id: 8, parentId: 2, type: 'member', placeholder: true,
+    name: 'Mr.Ryan Mutua', position: 'Organizing Secretary', image: "/images/leadership/ry.png",
+    biography: 'I am a passionate and ambitious young professional pursuing a Bachelor of Science in Data Science. I have a keen interest in technology, innovation, and using data-driven solutions to address real-world challenges. With a background in software development and a growing interest in artificial intelligence, I am committed to continuous learning, personal growth, and making a meaningful contribution to society. I believe in the power of collaboration, community empowerment, and creating opportunities that inspire positive change.',
     duties: [
       'Event organisation',
       'Member coordination',
