@@ -49,9 +49,7 @@ export default function Donate() {
 
       <section className="section">
         <div className="container">
-          {donate.mock && (
-            <Reveal className="mock-banner"><AlertTriangle size={18} /> <span><strong>Sample payment details.</strong> The numbers on this page are placeholders for design purposes – do not send money until CHIMA replaces them with its real details (<code>src/data/donate.js</code>).</span></Reveal>
-          )}
+         
 
           <SectionHeading eyebrow="Ways to give" title="Choose how you would like to donate" />
 
@@ -124,7 +122,6 @@ export default function Donate() {
               <label>Message / M-Pesa confirmation code (optional)<textarea rows="3" value={f.message} onChange={set('message')} /></label>
               <input className="hp" tabIndex="-1" autoComplete="off" aria-hidden="true" name="website" value={f.website} onChange={set('website')} />
               <button className="btn btn-gold" type="submit" disabled={sending}>{sending ? 'Sending…' : <>Send pledge <Send size={16} /></>}</button>
-              <small className="muted">Sent to {contact.email}. This form does not take payment.</small>
             </form>
           </Reveal>
         </div>
