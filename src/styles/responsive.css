@@ -1,69 +1,199 @@
-@media (max-width: 1100px) {
-  .values-grid { grid-template-columns: repeat(3, 1fr); }
-  .gallery-grid { grid-template-columns: repeat(3, 1fr); }
-  .nav-links a:not(.btn) { padding: .5rem .55rem; font-size: .93rem; }
-}
+/* ==========================================================================
+   responsive.css
+   Leadership / organogram section rewritten for every screen size.
+   Everything else is unchanged from the original file.
+   ========================================================================== */
 
-@media (max-width: 960px) {
-  .nav-toggle { display: block; }
-  .nav-links { position: fixed; top: var(--nav-h); left: 0; right: 0; flex-direction: column; align-items: stretch; gap: 0; background: #fff; padding: 1rem 1.5rem 1.5rem; box-shadow: 0 14px 24px rgba(0,0,0,.12); transform: translateY(-120%); opacity: 0; visibility: hidden; transition: transform .3s, opacity .3s, visibility .3s; max-height: calc(100vh - var(--nav-h)); overflow-y: auto; }
-  .nav-links.open { transform: none; opacity: 1; visibility: visible; }
-  .nav-links a:not(.btn) { padding: .9rem .4rem; border-bottom: 1px solid #eee; border-radius: 0; }
-  .nav-links a:not(.btn)::after { left: 0; right: auto; width: 40px; }
-  .nav-cta { margin: 1rem 0 0; justify-content: center; }
-
-  .two-col, .grid-2 { grid-template-columns: 1fr; }
-  .grid-3 { grid-template-columns: repeat(2, 1fr); }
-  .focus-grid { grid-template-columns: repeat(2, 1fr); }
-  .footer-grid { grid-template-columns: 1fr 1fr; }
-  .article-card.featured { flex-direction: column; }
-  .article-card.featured .card-media { min-height: 0; aspect-ratio: 16/9; flex: none; }
-
-  /* ---- Organogram: collapses into an indented vertical tree ---- */
-  .org-tree { overflow-x: visible; }
-  .org-tree > ul { width: auto; display: block; }
-  .org-tree ul { display: block; padding-top: 0; }
-  .org-tree li { display: block; padding: 0; }
-  .org-tree li::before, .org-tree li::after, .org-tree ul ul::before { display: none !important; }
-  .org-tree ul ul { margin-left: 22px; padding-left: 18px; border-left: 2px solid #b9a27a; }
-  .org-tree ul ul > li { position: relative; padding-top: 14px; }
-  .org-tree ul ul > li::before { display: block !important; content: ''; position: absolute; left: -18px; top: 56px; width: 18px; height: 0; border-top: 2px solid #b9a27a; border-right: 0 !important; border-radius: 0 !important; }
-  .org-tree .member-card { width: 100%; max-width: 420px; flex-direction: row; text-align: left; align-items: center; gap: .9rem; padding: .8rem 1rem; }
-  .org-tree .member-card img { margin: 0; width: 60px; height: 60px; flex-shrink: 0; }
-  .org-tree .member-card .txt { align-items: flex-start; }
-  .org-tree .body-card { flex-direction: column; text-align: center; max-width: 420px; }
-  .org-tree .member-card .view { display: none; }
-  .organogram-wrap { align-items: stretch; }
-}
-
-@media (max-width: 680px) {
-  .hero-cards { grid-template-columns: 1fr; }
-  .grid-3, .focus-grid { grid-template-columns: 1fr; }
-  .values-grid { grid-template-columns: repeat(2, 1fr); }
-  .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: .6rem; }
-  .footer-grid { grid-template-columns: 1fr; gap: 1.8rem; }
-  .brand img { height: 54px; }
-  .hero-actions .btn { flex: 1 1 100%; justify-content: center; }
-  .modal-head { flex-direction: column; text-align: center; padding-right: 0; }
-  .gallery-item span { opacity: 1; font-size: .75rem; }
-}
-
-@media (max-width: 400px) {
-  .values-grid { grid-template-columns: 1fr; }
-}
-
-@media (max-width: 960px) {
-  .pay-panel { grid-template-columns: 1fr; }
-  .scroll-cue { display: none; }
-}
-@media (max-width: 680px) {
-  .form-row, .check-grid { grid-template-columns: 1fr; }
-  .pay-tab span { font-size: .85rem; }
-  .pay-tab { padding: .55rem .9rem; }
-  .orb { display: none; }
-}
-@media (max-width: 1100px) { .nav-links a:not(.btn) { padding: .5rem .45rem; font-size: .9rem; } }
-@media (prefers-reduced-motion: reduce) {
-  .rise, .page-fade { opacity: 1; transform: none; animation: none; }
-  .bg-img, .orb, .scroll-cue, .nav-cta { animation: none; }
-}
+/* ---------- Laptops / large tablets: organogram stays a horizontal tree.
+   Seven cards sit side by side, so they shrink in steps to fit the screen
+   without sideways scrolling (the body cards keep their own width). ---------- */
+   @media (min-width: 961px) {
+    .org-tree li { padding-left: 6px; padding-right: 6px; }
+    .org-tree .member-card:not(.body-card) { width: 150px; padding: .9rem .6rem; }
+    .org-tree .member-card:not(.body-card) img { width: 76px; height: 76px; }
+  }
+  @media (max-width: 1219px) and (min-width: 961px) {
+    .org-tree .member-card:not(.body-card) { width: 140px; }
+    .org-tree .member-card:not(.body-card) img { width: 68px; height: 68px; }
+    .org-tree .member-card:not(.body-card) strong { font-size: .9rem; }
+  }
+  @media (max-width: 1119px) and (min-width: 961px) {
+    .org-tree .member-card:not(.body-card) { width: 120px; padding: .8rem .4rem; }
+    .org-tree .member-card:not(.body-card) img { width: 58px; height: 58px; }
+    .org-tree .member-card:not(.body-card) strong { font-size: .84rem; }
+    .org-tree .member-card:not(.body-card) .position { font-size: .68rem; letter-spacing: .02em; }
+    .org-tree .member-card:not(.body-card) .view { display: none; }
+  }
+  @media (max-width: 1000px) and (min-width: 961px) {
+    .org-tree .member-card:not(.body-card) { width: 114px; }
+    .org-tree .member-card:not(.body-card) img { width: 52px; height: 52px; }
+  }
+  /* Safety net: if the tree is still wider than the screen it scrolls sideways */
+  .org-tree { -webkit-overflow-scrolling: touch; scrollbar-width: thin; scrollbar-color: #b9a27a transparent; }
+  
+  @media (max-width: 1100px) {
+    .values-grid { grid-template-columns: repeat(3, 1fr); }
+    .gallery-grid { grid-template-columns: repeat(3, 1fr); }
+    .nav-links a:not(.btn) { padding: .5rem .55rem; font-size: .93rem; }
+  }
+  
+  @media (max-width: 960px) {
+    .nav-toggle { display: block; }
+    .nav-links { position: fixed; top: var(--nav-h); left: 0; right: 0; flex-direction: column; align-items: stretch; gap: 0; background: #fff; padding: 1rem 1.5rem 1.5rem; box-shadow: 0 14px 24px rgba(0,0,0,.12); transform: translateY(-120%); opacity: 0; visibility: hidden; transition: transform .3s, opacity .3s, visibility .3s; max-height: calc(100vh - var(--nav-h)); max-height: calc(100dvh - var(--nav-h)); overflow-y: auto; }
+    .nav-links.open { transform: none; opacity: 1; visibility: visible; }
+    .nav-links a:not(.btn) { padding: .9rem .4rem; border-bottom: 1px solid #eee; border-radius: 0; }
+    .nav-links a:not(.btn)::after { left: 0; right: auto; width: 40px; }
+    .nav-cta { margin: 1rem 0 0; justify-content: center; }
+  
+    .two-col, .grid-2 { grid-template-columns: 1fr; }
+    .grid-3 { grid-template-columns: repeat(2, 1fr); }
+    .focus-grid { grid-template-columns: repeat(2, 1fr); }
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+    .article-card.featured { flex-direction: column; }
+    .article-card.featured .card-media { min-height: 0; aspect-ratio: 16/9; flex: none; }
+  
+    /* ---- Organogram: collapses into an indented vertical tree ---- */
+    .org-tree { overflow-x: visible; }
+    .org-tree > ul { width: auto; display: block; }
+    .org-tree ul { display: block; padding-top: 0; }
+    .org-tree li { display: block; padding: 0; }
+    .org-tree li::before, .org-tree li::after, .org-tree ul ul::before { display: none !important; }
+    .org-tree ul ul { margin-left: 22px; padding-left: 18px; border-left: 2px solid #b9a27a; }
+    .org-tree ul ul > li { position: relative; padding-top: 14px; }
+    .org-tree ul ul > li::before { display: block !important; content: ''; position: absolute; left: -18px; top: 56px; width: 18px; height: 0; border-top: 2px solid #b9a27a; border-right: 0 !important; border-radius: 0 !important; }
+    /* Leaf cards vary in height (names wrap), so centre the connector on the card */
+    .org-tree ul ul > li:not(:has(> ul))::before { top: calc(50% + 7px); }
+  
+    .org-tree .member-card { width: 100%; max-width: 420px; min-height: 64px; flex-direction: row; text-align: left; align-items: center; gap: .9rem; padding: .8rem 1rem; cursor: pointer; -webkit-tap-highlight-color: transparent; touch-action: manipulation; }
+    .org-tree .member-card img { margin: 0; width: 60px; height: 60px; flex-shrink: 0; object-fit: cover; border-radius: 50%; }
+    .org-tree .member-card .txt { align-items: flex-start; min-width: 0; overflow-wrap: anywhere; }
+    .org-tree .member-card:active { transform: scale(.985); }
+    .org-tree .body-card { flex-direction: column; text-align: center; max-width: 420px; }
+    .org-tree .member-card .view { display: none; }
+    .organogram-wrap { align-items: stretch; }
+  }
+  
+  @media (max-width: 680px) {
+    .hero-cards { grid-template-columns: 1fr; }
+    .grid-3, .focus-grid { grid-template-columns: 1fr; }
+    .values-grid { grid-template-columns: repeat(2, 1fr); }
+    .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: .6rem; }
+    .footer-grid { grid-template-columns: 1fr; gap: 1.8rem; }
+    .brand img { height: 54px; }
+    .hero-actions .btn { flex: 1 1 100%; justify-content: center; }
+    .modal-head { flex-direction: column; text-align: center; padding-right: 0; }
+    .gallery-item span { opacity: 1; font-size: .75rem; }
+  }
+  
+  /* ---------- Phones: tighter tree so long names and titles never overflow ---------- */
+  @media (max-width: 480px) {
+    .org-tree .member-card { max-width: none; padding: .7rem .8rem; gap: .7rem; }
+    .org-tree .body-card { max-width: none; }
+    .org-tree .member-card img { width: 52px; height: 52px; }
+    .org-tree ul ul { margin-left: 12px; padding-left: 12px; }
+    .org-tree ul ul > li::before { left: -12px; width: 12px; }
+  }
+  
+  @media (max-width: 360px) {
+    .org-tree .member-card img { width: 44px; height: 44px; }
+    .org-tree ul ul { margin-left: 8px; padding-left: 10px; }
+    .org-tree ul ul > li::before { left: -10px; width: 10px; }
+  }
+  
+  @media (max-width: 400px) {
+    .values-grid { grid-template-columns: 1fr; }
+  }
+  
+  /* ==========================================================================
+     Leader profile pop-up (.modal-backdrop > .modal)
+     - the pop-up always fits the visible screen (dvh = real height on mobile browsers)
+     - the biography scrolls inside it with a slim gold scrollbar
+     - the photo/name header stays pinned on tablets and desktops, and the close
+       button always stays reachable
+     - scrolling inside it never scrolls the page behind
+     ========================================================================== */
+  body:has(.modal-backdrop) { overflow: hidden; }
+  
+  .modal-backdrop {
+    overflow: hidden;
+    overscroll-behavior: contain;
+    padding: max(1rem, env(safe-area-inset-top)) max(1rem, env(safe-area-inset-right)) max(1rem, env(safe-area-inset-bottom)) max(1rem, env(safe-area-inset-left));
+  }
+  .modal {
+    --pad: 2rem;
+    padding: var(--pad);
+    max-height: calc(100vh - 2rem);          /* fallback */
+    max-height: calc(100dvh - 2rem);
+    overflow-y: auto;
+    overflow-x: hidden;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+    overflow-wrap: anywhere;
+    scrollbar-width: thin;                   /* Firefox */
+    scrollbar-color: var(--gold-dark) transparent;
+  }
+  .modal::-webkit-scrollbar { width: 8px; }
+  .modal::-webkit-scrollbar-track { background: transparent; margin: 14px 0; }
+  .modal::-webkit-scrollbar-thumb { background: var(--gold-dark); border-radius: 8px; border: 2px solid #fff; }
+  .modal::-webkit-scrollbar-thumb:hover { background: var(--olive); }
+  
+  /* Close button: stays in view while the biography scrolls (assumes it is the first child of .modal) */
+  .modal > .modal-close {
+    position: sticky; top: .7rem; z-index: 5;
+    display: grid; width: 40px; height: 40px;
+    margin: calc(.7rem - var(--pad)) calc(.7rem - var(--pad)) calc(var(--pad) - .7rem - 40px) auto;
+    box-shadow: 0 2px 8px rgba(0,0,0,.15);
+  }
+  .modal-head img { flex-shrink: 0; }
+  .modal-head h3, .modal-head .position { min-width: 0; }
+  .modal p { line-height: 1.7; }
+  .modal .check-list li { overflow-wrap: anywhere; }
+  
+  /* Tablets and desktops: header pinned, only the biography/duties scroll under it */
+  @media (min-width: 681px) and (min-height: 561px) {
+    .modal-head {
+      position: sticky; top: calc(-1 * var(--pad)); z-index: 3;
+      margin: calc(-1 * var(--pad)) calc(-1 * var(--pad)) 1rem;
+      padding: var(--pad) calc(var(--pad) + 2.2rem) .9rem var(--pad);
+      background: #fff;
+      border-radius: 18px 18px 0 0;
+      box-shadow: 0 8px 12px -10px rgba(0,0,0,.25);
+    }
+  }
+  
+  /* Phones: roomier use of the screen, compact photo, header scrolls with the text */
+  @media (max-width: 680px) {
+    .modal { --pad: 1.25rem; border-radius: 16px; width: 100%; }
+    .modal-head { gap: .6rem; margin-bottom: .8rem; }
+    .modal-head img { width: 84px; height: 84px; border-width: 3px; }
+    .modal-head h3 { font-size: 1.15rem; }
+    .modal-contact { flex-direction: column; gap: .6rem; }
+  }
+  
+  /* Landscape phones: very little height, so photo and name sit side by side */
+  @media (max-height: 560px) {
+    .modal-head { flex-direction: row; text-align: left; align-items: center; gap: 1rem; padding-right: 2.5rem; }
+    .modal-head img { width: 64px; height: 64px; }
+  }
+  
+  /* Touch devices: no hover, so keep tap targets comfortable */
+  @media (hover: none) {
+    .org-tree .member-card { min-height: 64px; }
+  }
+  
+  @media (max-width: 960px) {
+    .pay-panel { grid-template-columns: 1fr; }
+    .scroll-cue { display: none; }
+  }
+  @media (max-width: 680px) {
+    .form-row, .check-grid { grid-template-columns: 1fr; }
+    .pay-tab span { font-size: .85rem; }
+    .pay-tab { padding: .55rem .9rem; }
+    .orb { display: none; }
+  }
+  @media (max-width: 1100px) { .nav-links a:not(.btn) { padding: .5rem .45rem; font-size: .9rem; } }
+  @media (prefers-reduced-motion: reduce) {
+    .rise, .page-fade { opacity: 1; transform: none; animation: none; }
+    .bg-img, .orb, .scroll-cue, .nav-cta { animation: none; }
+    .org-tree .member-card:active { transform: none; }
+  }

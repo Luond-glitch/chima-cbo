@@ -115,8 +115,8 @@ export const leadership = [
   },
   {
     id: 9, parentId: 2, type: 'member', placeholder: false,
-    name: 'Bp', position: 'Member at Large', image: "/images/leadership/",
-    biography: '',
+    name: 'Mr.Larry Ubane', position: 'Member at Large', image: "/images/leadership/member.jpeg",
+    biography: 'I am passionate and young ambitious professional pursuing Bachelor of Science in Nursing.I am committed to delivering compassionate, patient-centered care and promoting community health. Combining strong academic training in clinical sciences with hands-on hospital and outreach rotations, am hereby building practical skills in patient assessment, safe medication administration, and health education. Upon completing the degree,my  aim is to serve in frontline clinical practice and contribute to stronger healthcare outcomes across local communities',
     duties: [
       'Represent members and community interests.',
       'Promote youth participation and inclusivity',
