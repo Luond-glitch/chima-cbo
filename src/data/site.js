@@ -75,9 +75,9 @@ export const contact = {
   hours: 'Monday to Friday, 8:00 AM – 5:00 PM',
   // MOCK LINKS – replace each url with CHIMA's real page address when the pages exist.
   social: [
-    { name: 'Facebook', icon: 'Facebook', url: 'https://facebook.com/chimaorganisation' },
+    { name: 'Facebook', icon: 'Facebook', url: 'https://www.facebook.com/share/1ESBJZpsJV/' },
     { name: 'X (Twitter)', icon: 'Twitter', url: 'https://x.com/chima_org' },
-    { name: 'Instagram', icon: 'Instagram', url: 'https://instagram.com/chima_org' },
+    { name: 'Instagram', icon: 'Instagram', url: 'https://www.instagram.com/chipukizimazingira?avpt=MzN4YjVtaWs0c28x' },
     { name: 'LinkedIn', icon: 'Linkedin', url: 'https://linkedin.com/company/chima-org' },
     { name: 'YouTube', icon: 'Youtube', url: 'https://youtube.com/@chima_org' },
   ],
