@@ -163,6 +163,7 @@
   
   /* Phones: roomier use of the screen, compact photo, header scrolls with the text */
   @media (max-width: 680px) {
+    .modal-backdrop { place-items: start center; }   /* open at the TOP of the screen, not centred */
     .modal { --pad: 1.25rem; border-radius: 16px; width: 100%; }
     .modal-head { gap: .6rem; margin-bottom: .8rem; }
     .modal-head img { width: 84px; height: 84px; border-width: 3px; }
